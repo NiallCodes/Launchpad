@@ -1,0 +1,34 @@
+name: Build, Test and Publish
+on: workflow_dispatch
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Dotnet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+
+      - name: Checkout files
+        uses: actions/checkout@v3
+
+      - name: Run Unit Tests
+        run: dotnet test --verbosity normal
+  
+  publish-launchpad:
+    needs: run-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Dotnet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+
+      - name: Checkout files
+        uses: actions/checkout@v3
+
+      - name: Create the packages
+        run: dotnet pack -c Release
+
+      - name: Push packages to NuGet
+        run: dotnet nuget push Source/**/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
