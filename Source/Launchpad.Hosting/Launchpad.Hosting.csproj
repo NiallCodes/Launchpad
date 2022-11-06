@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <!-- Project -->
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>NiallCodes.Launchpad.Hosting</RootNamespace>
+
+        <!-- Build -->
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+        <!-- Nuget -->
+        <PackageId>NiallCodes.Launchpad.Hosting</PackageId>
+        <Title>NiallCodes.Launchpad.Hosting</Title>
+        <Authors>NiallCodes</Authors>
+        <Version>1.0.0</Version>
+        <Description>🚀 Classes and extensions for hosted services</Description>
+        <PackageProjectUrl>https://github.com/niallCodes/Launchpad</PackageProjectUrl>
+        <License>https://github.com/niallCodes/Launchpad/blob/main/LICENSE</License>
+        <RepositoryUrl>https://github.com/niallCodes/Launchpad</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Utilities" />
+    </ItemGroup>
+
+</Project>

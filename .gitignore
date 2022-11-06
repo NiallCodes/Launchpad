@@ -1,0 +1,14 @@
+# C#
+[Bb]in/
+[Oo]bj/
+
+# IDE's
+.vs/
+.vscode/
+.idea/
+
+# OS's
+.DS_Store
+
+# User
+*.user

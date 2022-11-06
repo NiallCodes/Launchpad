@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <!-- Project -->
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>NiallCodes.Launchpad.Configuration</RootNamespace>
+
+        <!-- Build -->
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+        <!-- Nuget -->
+        <PackageId>NiallCodes.Launchpad.Configuration</PackageId>
+        <Title>NiallCodes.Launchpad.Configuration</Title>
+        <Authors>NiallCodes</Authors>
+        <Description>🚀 Configuration validation and extensions</Description>
+        <PackageProjectUrl>https://github.com/niallCodes/Launchpad</PackageProjectUrl>
+        <License>https://github.com/niallCodes/Launchpad/blob/main/LICENSE</License>
+        <RepositoryUrl>https://github.com/niallCodes/Launchpad</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Chatter Projects -->
+        <InternalsVisibleTo Include="Launchpad.Configuration.Tests.Unit" />
+        <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    </ItemGroup>
+
+</Project>
